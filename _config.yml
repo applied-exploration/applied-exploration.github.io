@@ -1,18 +1,18 @@
 remote_theme: chesterhow/tale
 
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-url:            "https://chesterhow.github.io"
+title:          Applied Exploration
+description:    "Exploring Advanced Computation"
+url:            "https://applied-exploration.github.io/"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Mark Szulyovszky, Daniel Szemerey
+  url:          https://applied-exploration.github.io/
+  email:        _
 
 # Build settings
 markdown:       kramdown
