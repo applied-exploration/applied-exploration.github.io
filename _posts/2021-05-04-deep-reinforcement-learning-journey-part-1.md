@@ -9,6 +9,8 @@ tags: ops
 
 ![Cover Image](/assets/posts/drl-multi-1/1 - Title Illustration.png)
 
+You can find the entire [codebase here](https://github.com/applied-exploration/multi-drl)
+
 ## **Why Deep Reinforcement learning?**
 
 Deep Reinforcement Learning is about learning from mistakes - although all machine learning algorithms depend on making sense of the magnitude of error they’ve made. With RL, you can learn how to solve tasks that have an iterative, sequential decision making process (called [Markov Decision Process](https://en.wikipedia.org/wiki/Markov_decision_process)), like driving a car, playing chess or beating the human champion of… Breakout!
@@ -41,7 +43,7 @@ In the end what got us excited is the question if local agents together can conv
 
 ## Part I: Creating an Environment
 
-Conforming to the OpenAI gym interface is actually quite straightforward - you write a step, a reset and a render method. You have plenty of good examples in the[ gym repo](https://github.com/openai/gym). Having a multi-agent environment is not that tricky either: instead of passing in a single action to step , it takes an array of actions, one for each agent.
+Conforming to the OpenAI gym interface is actually quite straightforward - you write a step, a reset and a render method. You have plenty of good examples in the[ gym repo](https://github.com/openai/gym). Having a multi-agent environment is not that tricky either: instead of passing in a single action to step, it takes an array of actions, one for each agent.
 
 Despite its triviality, creating an environment from scratch has been an immensely useful exercise - so much that we were wondering why this isn't the first step in any course! It gives you a good perspective on the subtleties involved in bringing an RL project into life, that no amount of research paper browsing could for us.
 
@@ -73,9 +75,6 @@ Does an agent generalize well to variations of the environments? What happens wh
 
 
 
-_Criteria for solving the environment_ \
-How do you calculate the expected return of an agent? Even in a simple grid world environment,    [Calculating the Average Manhattan distance between each pair in a grid](https://www.notion.so/Calculating-the-Average-Manhattan-distance-between-each-pair-in-a-grid-6c31b8d51648402383de6f1bf2021821)
-
 
 ## Part II: Creating Agents
 
@@ -84,7 +83,7 @@ Deep Reinforcement Learning is not the only game in town, there are other approa
 
 
 *   Constraint propagation is often used for simple problems like sudoku or tic-tac-toe. For more difficult problems it is used in combination with other methods, eg.: to significantly decrease the state space that an algorithm has to traverse for an optimal solution. In our case, we could eliminate hazardous cells up front, but the number of possibilities is still too large to efficiently solve the environment.
-*   Searching the state space with A* or Monte Carlo Methods. An agent is guaranteed to converge on a solution, given enough computational resources, if the starting and ending positions are fixed. But 
+*   Searching the state space with A* or Monte Carlo Methods. An agent is guaranteed to converge on a solution, given enough computational resources, if the starting and ending positions are fixed. 
 *   Evolving strategies with Genetic Algorithms, which are a subset could be successfully used to create intelligent behaviour, like [Karl Sims’ demonstration](https://www.youtube.com/watch?v=bBt0imn77Zg) from two decades ago. GA’s are a promising alternative and we might explore solving this environment later on.
 
 But let’s get back to what we’re here for!
@@ -107,7 +106,7 @@ Our grid world consists of discrete states and agents can take four different di
 Let’s see what our expectations are with the following approaches.
 
 
-### Baseline Agents: DQN, Policy-based: REINFORCE
+### Baseline Agents: Value-based: DQN, Policy-based: REINFORCE
 
 The success of one of the most famous algorithms, Deep Q-Learning (DQN) kickstarted the current wave of interest in Reinforcement Learning. It substitutes the original Q-Table from the classical Q-Learning algorithm with a Deep Learning Architecture, thereby allowing agents to tackle environments with continuous states. The Deep Neural Network is tuned to approximate the value of selecting and action in a given state. We then select actions according to a heuristic.
 
