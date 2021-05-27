@@ -38,7 +38,7 @@ paginate:       5
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
-
+google_analytics: UA—198024164-1
 
 
 
