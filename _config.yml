@@ -6,7 +6,7 @@ description:    "Exploring Advanced Computation"
 url:            "https://applied-exploration.github.io/"
 
 # Google Analytics
-google_analytics: UA—XXXXXXXX-X
+google_analytics: UA-198024164-1
 
 # Author
 author:
@@ -38,7 +38,6 @@ paginate:       5
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
-google_analytics: UA—198024164-1
 
 
 
